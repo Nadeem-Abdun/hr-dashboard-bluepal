@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.js": "/hr-dashboard-bluepal/static/js/main.70e32d59.js",
+    "static/js/787.fb471dfb.chunk.js": "/hr-dashboard-bluepal/static/js/787.fb471dfb.chunk.js",
+    "index.html": "/hr-dashboard-bluepal/index.html",
+    "main.70e32d59.js.map": "/hr-dashboard-bluepal/static/js/main.70e32d59.js.map",
+    "787.fb471dfb.chunk.js.map": "/hr-dashboard-bluepal/static/js/787.fb471dfb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.70e32d59.js"
+  ]
+}
