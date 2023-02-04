@@ -15,7 +15,7 @@ export default function CardTemplate(props) {
                     <CardContent>
                         <Stack direction='column' spacing={6} >
                             <Stack direction='row' display='flex' justifyContent='space-between' alignItems='center'>
-                                <Typography component='body2' variant='body2' display='flex' justifyContent='center' alignItems='center' color="text.secondary" gutterBottom><CalendarMonthIcon fontSize='small' />{date}</Typography>
+                                <Typography component='body2' variant='body2' display='flex' justifyContent='center' alignItems='center' color="text.secondary" gutterBottom><CalendarMonthIcon sx={{ color: '#c5c6ca', marginRight:'5px' }} fontSize='small'/>{date}</Typography>
                                 {statusIco}
                             </Stack>
                             <Stack direction='column' display='flex' alignItems='flex-start'>

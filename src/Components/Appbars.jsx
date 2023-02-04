@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { AppBar, Box, Stack, Button, Menu, MenuItem, Avatar, styled, InputBase, Badge } from '@mui/material'
+import { AppBar, Box, Stack, Button, Menu, MenuItem, Avatar, styled, Badge, Typography } from '@mui/material'
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
@@ -7,6 +7,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import ForumIcon from '@mui/icons-material/Forum';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import InboxIcon from '@mui/icons-material/Inbox';
+import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline';
 
 export default function Appbars() {
   const [open, setOpen] = useState(false);
@@ -16,12 +17,6 @@ export default function Appbars() {
   const handleClose = (event) => {
     setOpen(false);
   };
-  const Searchbar = styled('div')({
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: '100%'
-  })
   const StyledAppBar = styled(AppBar)({
     background: "#ffffff",
     height: '100%',
@@ -35,12 +30,17 @@ export default function Appbars() {
             <Box bgcolor='#259ff4' display='flex' justifyContent='center' height='100%' flex={0.6}>
               <IconButton color="inherit" aria-label="menu" ><MenuIcon fontSize='medium' /></IconButton>
             </Box>
-            <Box display='flex' justifyContent='center' flex={0.4} >
-
+            <Box display='flex' justifyContent='center' flex={0.1} >
+              {/* Empty Box */}
             </Box>
             {/* SearchBar */}
-            <Box display='flex' justifyContent='center' flex={3} >
-              <Searchbar><SearchIcon color='info' /><InputBase fontSize='small' placeholder='Search for any Document or Employee..' fullWidth /></Searchbar>
+            <Box display='flex' justifyContent='center' flex={4} >
+              <Stack width='100%' direction='row' justifyContent='center' alignItems='center'>
+                <SearchIcon fontSize='small' sx={{ color: '#c5c6ca', marginRight: '6px' }} />
+                <Typography component='body2' variant='body2' sx={{ fontSize: '13px', color:'#aaafba' }}>Search for any Document or</Typography>
+                <Typography component='body2' variant='body2' marginLeft={0.5} fontWeight='bold' sx={{ fontSize: '13px', color:'#3c99db' }}>Employee&#40;Wayne Enterprise&#41;</Typography>
+                <ErrorOutlineIcon fontSize='small' sx={{ color: '#c5c6ca', marginLeft: '6px' }} />
+              </Stack>
             </Box>
             <Box display='flex' justifyContent='center' flex={4.5} >
 
@@ -48,9 +48,9 @@ export default function Appbars() {
             {/* Notification Icons */}
             <Box display='flex' justifyContent='center' flex={1.5}>
               <Stack direction='row' spacing={2}>
-                <IconButton><Badge color="primary"><ForumIcon color="action" /></Badge></IconButton>
-                <IconButton><Badge badgeContent={4} color="primary"><NotificationsIcon color="action" /></Badge></IconButton>
-                <IconButton><Badge badgeContent={3} color="primary"><InboxIcon color="action" /></Badge></IconButton>
+                <IconButton><Badge color="primary"><ForumIcon sx={{ color: '#c5c6ca' }} /></Badge></IconButton>
+                <IconButton><Badge badgeContent={4} color="primary"><NotificationsIcon sx={{ color: '#c5c6ca' }} /></Badge></IconButton>
+                <IconButton><Badge badgeContent={3} color="primary"><InboxIcon sx={{ color: '#c5c6ca' }} /></Badge></IconButton>
               </Stack>
             </Box>
             {/* Profile */}

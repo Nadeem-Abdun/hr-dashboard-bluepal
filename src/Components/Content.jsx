@@ -19,11 +19,11 @@ export default function Content() {
                                     <Typography component='h1' variant='h4'><strong>Welcome back to your Dashboard Alex</strong></Typography>
                                 </Box>
                                 {/* SubTitle */}
-                                <Box mb={2.5}>
+                                <Box mb={2.5} marginTop={2}>
                                     <Typography component='h3' variant='body2'><small>We recommended you complete <b><u>Certificates of Employment</u></b> and upload <b><u>New Registration</u></b> to system from last week.</small></Typography>
                                 </Box>
                                 {/* Infographics */}
-                                <Box mb={3}>
+                                <Box mb={3} marginTop={3}>
                                     <Stack direction='row' >
                                         <Grid container justifyContent='center' alignItems='center'>
                                             <Grid Item xs={12} sm={12} md={12} lg={12}>
@@ -78,8 +78,8 @@ export default function Content() {
                                     </Stack>
                                 </Box>
                                 {/* Button */}
-                                <Box display='flex' justifyContent='center' alignItems='center' >
-                                    <Button variant='contained' color='inherit' fontWeight='bold'>See Full Reports</Button>
+                                <Box display='flex' justifyContent='center' alignItems='center' marginTop={1.5} >
+                                    <Button variant='contained' sx={{ bgcolor: '#fafafa', color: 'black' }} fontWeight='bold'>See Full Reports</Button>
                                 </Box>
                             </Stack>
                         </Box>
